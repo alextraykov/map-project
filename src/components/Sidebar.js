@@ -2,26 +2,32 @@ import React, { Component } from "react";
 import "../App.css";
 class Sidebar extends Component {
     render() {
+        const {
+            filterVenues,
+            listItemClick,
+            filteredVenues,
+            query
+        } = this.props;
         return (
             <div id="sidebar">
                 <input
                     className="inputField"
                     placeholder="filter content"
-                    value={this.props.query}
+                    value={query}
                     onChange={e => {
-                        this.filterVenues(e.target.value);
+                        filterVenues(e.target.value);
                     }}
                 />
                 <br />
                 <br />
-                {this.props.filteredVenues &&
-                    this.props.filteredVenues.length > 0 &&
-                    this.props.filteredVenues.map((venue, index) => (
+                {filteredVenues &&
+                    filteredVenues.length > 0 &&
+                    filteredVenues.map((venue, index) => (
                         <div
                             key={index}
                             className="venue-item"
                             onClick={() => {
-                                this.state.listItemClick(venue);
+                                listItemClick(venue);
                             }}
                         >
                             {venue.name}
