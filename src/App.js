@@ -4,6 +4,7 @@ import "./App.css";
 // import Fetcher from "./Fetcher";
 // import Sidebar from "./components/Sidebar";
 import NavBar from "./components/NavBar";
+import GymItem from "./components/GymItem";
 // import Infobox from "./components/Infobox";
 
 class App extends Component {
@@ -110,12 +111,20 @@ class App extends Component {
 
     render() {
         return (
-            <div id="main-canvas">
-                <NavBar
-                    inputValue={this.state.inputValue}
-                    handleInputChange={this.handleInputChange}
-                />
+            // <div id="main-canvas">
+            //     <NavBar
+            //         inputValue={this.state.inputValue}
+            //         handleInputChange={this.handleInputChange}
+            //     />
+            // </div>
+            <div class="centred-content">
+                <GymItem />
+                <GymItem />
+                <GymItem />
+                <GymItem />
+                <GymItem />
             </div>
+           
         );
     }
 }
