@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "framer-motion": "^1.6.17",
     "mobx": "^5.15.0",
     "mobx-react": "^6.1.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-fontawesome": "^1.7.1",
     "react-scripts": "3.2.0"
   },
   "scripts": {
