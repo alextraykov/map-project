@@ -1,8 +1,26 @@
+#gym-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+}
+
+#gym-items-container {
+    width: 100%;
+    margin-top: 250px;
+}
+
 .fw-image {
     width: 100vw;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(50%);
+    z-index: -999;
     margin-left: -50vw;
-    height: 600px;
-    left: 50%;
+    height: 400px;
     object-fit: cover;
+    filter: brightness(50%);
 }

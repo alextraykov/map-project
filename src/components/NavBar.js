@@ -8,70 +8,74 @@ export default class NavBar extends React.Component {
         this.state = {
             query: "",
             inputValue: "",
-              gyms: [
+            gyms: [
                 {
-                  id: 0,
-                  title: 'Boxing',
-                  selected: false,
-                  key: 'gyms'
+                    id: 0,
+                    title: "Boxing",
+                    selected: false,
+                    key: "gyms"
                 },
                 {
-                  id: 1,
-                  title: 'Wrestling',
-                  selected: false,
-                  key: 'gyms'
+                    id: 1,
+                    title: "Wrestling",
+                    selected: false,
+                    key: "gyms"
                 },
                 {
-                  id: 2,
-                  title: 'Mixed Martial Arts',
-                  selected: false,
-                  key: 'gyms'
+                    id: 2,
+                    title: "Mixed Martial Arts",
+                    selected: false,
+                    key: "gyms"
                 },
                 {
-                  id: 3,
-                  title: 'BJJ',
-                  selected: false,
-                  key: 'gyms'
+                    id: 3,
+                    title: "BJJ",
+                    selected: false,
+                    key: "gyms"
                 },
                 {
-                  id: 4,
-                  title: 'Karate',
-                  selected: false,
-                  key: 'gyms'
+                    id: 4,
+                    title: "Karate",
+                    selected: false,
+                    key: "gyms"
                 }
-              ]
-        }
+            ]
+        };
     }
 
     toggleSelected = (id, key) => {
-        let temp = JSON.parse(JSON.stringify(this.state[key]))
-        temp[id].selected = !temp[id].selected
+        let temp = JSON.parse(JSON.stringify(this.state[key]));
+        temp[id].selected = !temp[id].selected;
         this.setState({
-          [key]: temp
-        })
-      }
-    
-      resetThenSet = (id, key) => {
-        let temp = JSON.parse(JSON.stringify(this.state[key]))
-        temp.forEach(item => item.selected = false);
+            [key]: temp
+        });
+    };
+
+    resetThenSet = (id, key) => {
+        let temp = JSON.parse(JSON.stringify(this.state[key]));
+        temp.forEach(item => (item.selected = false));
         temp[id].selected = true;
         this.setState({
-          [key]: temp
-        })
-      }
-
+            [key]: temp
+        });
+    };
 
     render() {
         return (
             <div className="nav-container">
-                <img className="dojohunt-logo" src={require('../images/dojohunt-logo.svg')} />
-            <div className="input-dropdown-container">
+                <img
+                    className="dojohunt-logo"
+                    src={require("../images/dojohunt-logo.svg")}
+                />
+                <div className="input-dropdown-container">
                     <input
                         type="text"
                         value={this.state.inputValue}
                         placeholder="Search"
                         id="nav-input"
-                        onChange={e => this.state.handleInputChange(e.target.value)}
+                        onChange={e =>
+                            this.state.handleInputChange(e.target.value)
+                        }
                     />
                     <Dropdown
                         id="nav-dropdown"
@@ -79,8 +83,8 @@ export default class NavBar extends React.Component {
                         list={this.state.gyms}
                         resetThenSet={this.resetThenSet}
                     />
-        </div>
+                </div>
             </div>
         );
-}
+    }
 }
