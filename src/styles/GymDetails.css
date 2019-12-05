@@ -1,0 +1,8 @@
+.fw-image {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 600px;
+    left: 50%;
+    object-fit: cover;
+}
