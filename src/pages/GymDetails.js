@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../styles/GymDetails.css";
 import GymHeaderDetails from "../components/GymHeaderDetails";
 import Reviews from "../components/Reviews";
+import ContactStrip from "../components/ContactStrip";
+import PhotoGrid from "../components/PhotoGrid";
 
 class GymDetails extends Component {
     render() {
@@ -20,8 +22,10 @@ class GymDetails extends Component {
                  <GymHeaderDetails />
                 </div>
                 <div className="content-container">
-                    <h2>Heading 2</h2>
+                    <PhotoGrid />
+                    <h2>Reviews</h2>
                     <Reviews />
+                    <ContactStrip />
                 </div>
             </div>
         );
