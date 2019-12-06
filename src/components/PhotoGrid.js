@@ -5,24 +5,17 @@ export default function PhotoGrid(props) {
     return (
         <div className="container">
             <div className="item">
-                <img src="https://via.placeholder.com/350" />
-            </div>
+                <img className="item-img" src="https://via.placeholder.com/150" />
+            </div>       
             <div className="item">
-                <img src="https://via.placeholder.com/150" />
-            </div>
+                <img className="item-img" src="https://via.placeholder.com/150" />
+            </div>       
             <div className="item">
-                <img src="https://via.placeholder.com/150" />
-            </div>
+                <img className="item-img" src="https://via.placeholder.com/150" />
+            </div>       
             <div className="item">
-                <img src="https://via.placeholder.com/150" />
-            </div>
-            <div className="item">
-                <img src="https://via.placeholder.com/150" />
-            </div>
-            <div className="item">
-                <img src="https://via.placeholder.com/150" />
-            </div>
-            
+                <img className="item-img" src="https://via.placeholder.com/150" />
+            </div>   
         </div>
     );
 }

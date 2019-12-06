@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMapGL from 'react-map-gl';
+import StaticMap from 'react-map-gl';
 
 export default class Map extends React.Component {
 
@@ -15,7 +15,9 @@ export default class Map extends React.Component {
 
   render() {
     return (
-      <ReactMapGL
+      <StaticMap
+      captureScroll={true}
+      captureDrag={true}
         mapboxApiAccessToken={"pk.eyJ1IjoicG9sZWNhdHNreSIsImEiOiJjano0NmNsOTgwYTIxM2RwYXB0NjFtMHhrIn0.C7TggPuEGoLMKnY7b6Foww"}
         {...this.state.viewport}
         onViewportChange={(viewport) => this.setState({viewport})}

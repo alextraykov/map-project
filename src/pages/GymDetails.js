@@ -4,6 +4,7 @@ import GymHeaderDetails from "../components/GymHeaderDetails";
 import Reviews from "../components/Reviews";
 import ContactStrip from "../components/ContactStrip";
 import PhotoGrid from "../components/PhotoGrid";
+import SuggestedGym from "../components/SuggestedGym";
 
 class GymDetails extends Component {
     render() {
@@ -22,10 +23,16 @@ class GymDetails extends Component {
                  <GymHeaderDetails />
                 </div>
                 <div className="content-container">
+                <h2>Photos</h2>
                     <PhotoGrid />
                     <h2>Reviews</h2>
                     <Reviews />
                     <ContactStrip />
+                    <h2>Suggested Gyms</h2>
+               <div className="suggested-gyms">
+                        <SuggestedGym />
+                        <SuggestedGym />
+               </div>
                 </div>
             </div>
         );

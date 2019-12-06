@@ -1,5 +1,5 @@
 .fw-strip {
-  position: absolute;
+  position: relative;
   width: 100%;
   left: 0;
   background: #fff;
@@ -10,6 +10,7 @@
   align-items: center;
   text-align: center;
   justify-items: center;
+  margin-bottom: 40px;
 }
 
 .paragraph {
