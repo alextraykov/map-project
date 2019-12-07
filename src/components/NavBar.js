@@ -7,39 +7,7 @@ export default class NavBar extends React.Component {
         super(props);
         this.state = {
             query: "",
-            inputValue: "",
-            gyms: [
-                {
-                    id: 0,
-                    title: "Boxing",
-                    selected: false,
-                    key: "gyms"
-                },
-                {
-                    id: 1,
-                    title: "Wrestling",
-                    selected: false,
-                    key: "gyms"
-                },
-                {
-                    id: 2,
-                    title: "Mixed Martial Arts",
-                    selected: false,
-                    key: "gyms"
-                },
-                {
-                    id: 3,
-                    title: "BJJ",
-                    selected: false,
-                    key: "gyms"
-                },
-                {
-                    id: 4,
-                    title: "Karate",
-                    selected: false,
-                    key: "gyms"
-                }
-            ]
+            inputValue: ""
         };
     }
 

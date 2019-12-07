@@ -21,4 +21,13 @@ export default class Fetcher {
 
         return fetch(apiURL).then(resp => resp.json());
     }
+
+    async fetchPlacesTest(query) {
+        var apiURL = `https://api.foursquare.com/v2/venues/search?client_id=WEA5DGFHYPFUZDSRT3PJSZLC0TTZKDOCHJMRE2HQWYECNZMD&client_secret=NJQQBRJFHK5V54QL1XNVJ1YCIPDCQYV1BC02G5SBPXKGBHTD&v=20130815%20&limit=50&near=${process.env.REACT_APP_CITY}&query=${query}`;
+
+        return await Promise.all([
+            this.fetchGoogleMaps(),
+            fetch(apiURL).then(resp => resp.json())
+        ]);
+    }
 }
